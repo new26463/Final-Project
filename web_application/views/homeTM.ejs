@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NonNhai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/homeTM.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="./javascript/searchForeigner.js"></script>
+    <script type="text/javascript"src="./javascript/config.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAjkv0Xdfnxgj479POHG-akwgXD9zyLmM" type="text/javascript"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <style media="screen">
+       body{
+         /* overflow: hidden; */
+         overflow-x:  hidden;
+       }
+       .baseBg{
+         position: relative;
+         z-index: 1;
+       }
+       .bgImg{
+         position: absolute;
+         z-index: -1;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: url("./img/passport.png") center center;
+         opacity: .35;
+         width: 100%;
+         height: 100%;
+       }
+       #map{
+          width: 100%;
+          height: 520px;
+       }
+       table{
+          overflow-x:auto !important;
+       }
+       .imgmap{
+          width: 100%;
+          height: 420px;
+       }
+       .gm-style-cc { display:none; }
+       .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
+          border-bottom-right-radius:20px;
+          border-top-right-radius:20px;
+       }
+       .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){
+          border-bottom-left-radius:20px;
+          border-top-left-radius:20px;
+       }
+      </style>
+      <script type="text/javascript">
+         $(document).ready(function(){
+            $("#key").hide();
+         })
+      </script>
+  </head>
+  <body>
+     <div class="baseBg">
+        <div class="bgImg">
+        </div>
+        <nav class="navbar navbar-light bg-light"><a href="/" class="navbar-brand"><img src="" width="30" height="30" alt="" class="d-inline-block align-top">NonNhai</a><span class="navbar-brand">Hello <%= name %> <%= surname %> &nbsp <span id="key"><%= key %></span><form method="post" style="display:inline;"><button class="btn btn-success" id="logout" type="submit">Log out</button></form></span></nav><br>
+        <div align="center" class="col-md-12">
+         <form class="form-inline" >
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+               <label class="btn btn-secondary active">
+                  <input type="radio" name="searchBy" id="searchByName" autocomplete="off" value="1" checked> Name
+               </label>
+               <label class="btn btn-secondary">
+                  <input type="radio" name="searchBy" id="searchByNoPassport" autocomplete="off" value="2"> NO Passport
+               </label>
+            </div>
+            <input type="text" autocomplete="off" name="no_passport" id="search" maxlength="40" placeholder="Search by name or passport" onkeypress="validate(event)" aria-label="Search" class="form-control mr-sm-2">
+            <button type="button" id="b_search" onclick="clickFunction()" class="btn btn-primary my-2 my-sm-0">Search</button><br>
+          </form><br>
+       </div>
+       <center>
+          <div id="detail">
+          </div>
+       </center><br>
+       <div class="row">
+          <div id="table" class="col-md-6">
+
+          </div>
+          <div id="map" class="col-md-6">
+
+          </div>
+       </div>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

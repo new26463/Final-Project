@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NonNhai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="./javascript/searchService.js"></script>
+    <script type="text/javascript" src="./javascript/config.js"></script>
+    <style media="screen">
+       .baseBg{
+          position: relative;
+          z-index: 1;
+       }
+       .bgImg{
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: url("./img/passport.png") center center;
+          opacity: .35;
+          width: 100%;
+          height: 100vh;
+       }
+       .navbar{
+          background: -webkit-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+          background: -o-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+          background: -moz-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+          background: linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+       }
+       form.form-inline{
+          display: inline !important;
+       }
+       input.form-control.mr-sm-2{
+          width: 300px;
+          border-radius: 20px;
+       }
+       button#b_search{
+          border-radius: 20px;
+       }
+       button#logout{
+          border-radius: 25px;
+       }
+       #detail{
+          width: 30%;
+          border: solid 0;
+       }
+       #table{
+          margin-top: 7px;
+       }
+       .table-dark{
+          background: #32383eaa;
+       }
+       table.table.table-dark.text-center{
+          width: 40%;
+          margin: 0 auto !important;
+          border-radius: 20px;
+          border-color: inherit;
+       }
+       .table-dark td, .table-dark th, .table-dark thead th{
+          border: none;
+       }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#key").hide();
+      })
+    </script>
+  </head>
+  <body>
+     <div class="baseBg">
+        <div class="bgImg">
+        </div>
+        <nav class="navbar navbar-light bg-light"><a href="/" class="navbar-brand"><img src="" width="30" height="30" alt="" class="d-inline-block align-top">NonNhai</a><span class="navbar-brand">Hello <%= name %> <%= surname %> &nbsp <span id="key"><%= key %></span><form method="post" style="display:inline;"><button class="btn btn-success" id="logout" type="submit" onclick="destroy()">Log out</button></form></span></nav><br>
+        <div align="center" class="col-md-12">
+           <form class="form-inline">
+             <input type="text" autocomplete="off" name="no_passport" id="search" maxlength="9" placeholder="Search by NO. Passport" onkeypress="validate(event)" aria-label="Search" class="form-control mr-sm-2">
+             <!-- onkeypress="validate(event)" -->
+             <button type="button" id="b_search" onclick="clickFunction()" class="btn btn-primary my-2 my-sm-0">Search</button><br>
+          </form><br>
+       </div>
+       <center>
+          <div id="detail">
+
+          </div>
+       </center>
+       <div id="table" class="container">
+
+       </div>
+    </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

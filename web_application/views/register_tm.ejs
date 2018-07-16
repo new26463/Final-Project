@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>NonNhai</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <link rel="stylesheet" href="./css/register.css">
+      <script src="./javascript/register.js"></script>
+      <script type="text/javascript" src="./javascript/config.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-light bg-light"><a href="/registerStaffhotel" class="navbar-brand"><img src="" width="30" height="30" alt="" class="d-inline-block align-top">NonNhai</a></nav><br>
+      <div class="container">
+         <form>
+            <div class="container">
+               <div class="form-group">
+                  <label><b>Name</b></label>
+                  <input type="text" class="form-control" id="regisName" name="regisName" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label><b>Surname</b></label>
+                  <input type="text" class="form-control" id="regisSurname" name="regisSurname" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label><b>Email <font style="color:red;">*</font></b></label>
+                  <input type="email" class="form-control" id="regisEmail" name="regisEmail" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label><b>Password</b></label>
+                  <input type="password" class="form-control" id="regisPassword" name="regisPassword" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label><b>Hotel ID</b></label>
+                  <input type="text" class="form-control" id="regisHotelID" name="regisHotelID" autocomplete="off" required>
+               </div>
+               <div class="form-group">
+                  <label><b>Hotel name</b></label>
+                  <input type="text" class="form-control" id="regisHotelName" name="regisHotelName" autocomplete="off" required>
+               </div>
+               <div align="center" style="margin-top:15px;">
+                  <button type="button" class="btn btn-primary" name="send" onclick="saveUser()">Insert user</button>
+               </div>
+            </div>
+         </form>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   </body>
+</html>

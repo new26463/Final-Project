@@ -1,0 +1,34 @@
+.navbar{
+   background: -webkit-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+   background: -o-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+   background: -moz-linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+   background: linear-gradient(rgba(255,255,255,1) 60%, rgba(255,255,255,0.75)) !important;
+}
+form.form-inline{
+   display: inline !important;
+}
+input.form-control.mr-sm-2{
+   width: 300px;
+   border-radius: 20px;
+}
+button#b_search{
+   border-radius: 20px;
+}
+button#logout{
+   border-radius: 25px;
+}
+#detail{
+   width: 55%;
+   padding-top: 10px;
+   padding-bottom: -10px;
+   border-radius: 13px;
+   border: solid 0;
+   border-color: rgba(255,255,255,0.75);
+   background-color: rgba(255,255,255,0.75);
+}
+#table{
+   margin-top: 7px;
+}
+.table-dark{
+   background: #32383eaa;
+}
